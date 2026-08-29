@@ -1,0 +1,403 @@
+{
+ "carta": {
+  "id": "spa",
+  "nombre": "Health & Spa",
+  "tema": "spa",
+  "logo": "hotel.svg",
+  "idiomas": [
+   "es"
+  ],
+  "actualizado": "2026-08-28T00:00:00.000Z",
+  "ver_tambien": "",
+  "pie": {
+   "es": "Con reserva previa sin excepción y según disponibilidad. Tel: (0230) 438 5000 / Reservas Health Club: (0230) 438 5070 · WhatsApp: +54 9 11 3135 3014. healthclub@pilar.sheraton.com.ar"
+  }
+ },
+ "tags": {
+  "MAYORES_16": {
+   "es": "Solo mayores de 16 años",
+   "en": "Adults (16+) only",
+   "pt": "Somente maiores de 16 anos"
+  }
+ },
+ "config": {
+  "moneda": {
+   "es": "ARS",
+   "en": "ARS",
+   "pt": "ARS"
+  },
+  "simbolo": {
+   "es": "$",
+   "en": "$",
+   "pt": "$"
+  },
+  "hotel": {
+   "es": "Sheraton Pilar Hotel & Convention Center",
+   "en": "Sheraton Pilar Hotel & Convention Center",
+   "pt": "Sheraton Pilar Hotel & Convention Center"
+  }
+ },
+ "secciones": [
+  {
+   "id": "dias-de-spa",
+   "nombre": {
+    "es": "Días de Spa"
+   },
+   "foto": "",
+   "nota": {
+    "es": "Con reserva previa sin excepción y según disponibilidad."
+   },
+   "items": [
+    {
+     "id": "spa-relax-adultos-lj",
+     "nombre": {
+      "es": "Spa Relax — Adultos (Lunes a Jueves)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos."
+     },
+     "precio": 135000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-relax-adultos-vd",
+     "nombre": {
+      "es": "Spa Relax — Adultos (Viernes a Domingos o feriados)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos."
+     },
+     "precio": 165000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-relax-menores-lj",
+     "nombre": {
+      "es": "Spa Relax — Menores de 15 años inclusive (Lunes a Jueves)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. El hidromasaje, ice bath, saunas, gimnasio, masajes y tratamientos faciales son solo para mayores de 16 años. Los menores podrán acceder al Health & Spa y a la sala de juegos hasta las 17 hs; luego podrán seguir disfrutando del resto de las instalaciones del hotel. La mesa de pool de la sala de juegos es de uso exclusivo para mayores de 16 años."
+     },
+     "precio": 67500.0,
+     "tags": []
+    },
+    {
+     "id": "spa-relax-menores-vd",
+     "nombre": {
+      "es": "Spa Relax — Menores de 15 años inclusive (Viernes a Domingos o feriados)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. El hidromasaje, ice bath, saunas, gimnasio, masajes y tratamientos faciales son solo para mayores de 16 años. Los menores podrán acceder al Health & Spa y a la sala de juegos hasta las 17 hs; luego podrán seguir disfrutando del resto de las instalaciones del hotel. La mesa de pool de la sala de juegos es de uso exclusivo para mayores de 16 años."
+     },
+     "precio": 82500.0,
+     "tags": []
+    },
+    {
+     "id": "spa-energizante-lj",
+     "nombre": {
+      "es": "Spa Energizante (Lunes a Jueves)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 25´ a elección. Una merienda en el Lobby Bar (infusión caliente, jugo de naranja, tostadas o medialuna)."
+     },
+     "precio": 165000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-energizante-vd",
+     "nombre": {
+      "es": "Spa Energizante (Viernes a Domingos o feriados)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 25´ a elección. Una merienda en el Lobby Bar (infusión caliente, jugo de naranja, tostadas o medialuna)."
+     },
+     "precio": 230000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-integral-lj",
+     "nombre": {
+      "es": "Spa Integral (Lunes a Jueves)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 50´ Integral Descontracturante. Un almuerzo en el Lobby Bar (menú a elección: Caesar tradicional u ojo de bife braseado, crema de vino, corona de papa y hongos, y cherrys asados; helado de americana con frutos rojos, gaseosa y café)."
+     },
+     "precio": 240000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-integral-vd",
+     "nombre": {
+      "es": "Spa Integral (Viernes a Domingos o feriados)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 50´ Integral Descontracturante. Un almuerzo en el Lobby Bar (menú a elección: Caesar tradicional u ojo de bife braseado, crema de vino, corona de papa y hongos, y cherrys asados; helado de americana con frutos rojos, gaseosa y café)."
+     },
+     "precio": 300000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-radiante-lj",
+     "nombre": {
+      "es": "Spa Radiante (Lunes a Jueves)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 50´ relajante o descontracturante. Facial de 25´ con máscara de oro y células madre de Argán. Desayuno o merienda en el Lobby Bar (infusión caliente, jugo de naranja, tostadas o medialuna)."
+     },
+     "precio": 255000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    },
+    {
+     "id": "spa-radiante-vd",
+     "nombre": {
+      "es": "Spa Radiante (Viernes a Domingos o feriados)"
+     },
+     "descripcion": {
+      "es": "Piscina climatizada con hidromasaje y piscina externa con solárium húmedo (en temporada). Sauna, baños de vapor y sala de relax. Ice Bath, piscina de crioterapia. Gimnasio. Sala de juegos. Masaje de 50´ relajante o descontracturante. Facial de 25´ con máscara de oro y células madre de Argán. Desayuno o merienda en el Lobby Bar (infusión caliente, jugo de naranja, tostadas o medialuna)."
+     },
+     "precio": 325000.0,
+     "tags": [
+      "MAYORES_16"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "masajes",
+   "nombre": {
+    "es": "Masajes"
+   },
+   "foto": "",
+   "nota": {
+    "es": "Presentarse 15´ antes del horario de reserva para poder aprovechar su tiempo de masaje. Política de cancelación: para cancelar un masaje ya reservado, avisar por lo menos 2 horas antes de la hora reservada; caso contrario se aplicará el 50% del valor del mismo."
+   },
+   "items": [
+    {
+     "id": "masaje-bienestar",
+     "nombre": {
+      "es": "Masaje de Bienestar 1h 20´"
+     },
+     "descripcion": {
+      "es": "Masaje descontracturante y relajante que produce un bienestar general y reduce el estrés."
+     },
+     "precio": 135000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-pareja",
+     "nombre": {
+      "es": "Masaje en Pareja 50´ (únicamente viernes a domingo)"
+     },
+     "descripcion": {
+      "es": "Para disfrutar de a dos de un masaje descontracturante y relajante. Una experiencia compartida."
+     },
+     "precio": 210000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-aromatico",
+     "nombre": {
+      "es": "Masaje Aromático Relajante 50´"
+     },
+     "descripcion": {
+      "es": "Masaje de maniobras relajantes realizado con aceites aromáticos esenciales logrando sensaciones cutáneas y olfativas."
+     },
+     "precio": 130000.0,
+     "tags": []
+    },
+    {
+     "id": "exfoliacion-corporal",
+     "nombre": {
+      "es": "Exfoliación Corporal 50´"
+     },
+     "descripcion": {
+      "es": "Exfoliación y limpieza corporal que elimina células muertas, dejando la piel suave y fresca."
+     },
+     "precio": 115000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-integral-descontracturante",
+     "nombre": {
+      "es": "Masaje Integral Descontracturante 50´"
+     },
+     "descripcion": {
+      "es": "Masaje de maniobras profundas para eliminar contracturas y recuperar la estructura muscular."
+     },
+     "precio": 115000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-antiestres-rostro",
+     "nombre": {
+      "es": "Masaje Anti Estrés de Rostro y Cuero Cabelludo 25´"
+     },
+     "descripcion": {
+      "es": "Masaje relajante por excelencia. Mejora la circulación sanguínea de rostro, cuello y cuero cabelludo. Reduce y elimina tensiones, movilizando los tejidos de la piel."
+     },
+     "precio": 95000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-descontracturante",
+     "nombre": {
+      "es": "Masaje Descontracturante 25´"
+     },
+     "descripcion": {
+      "es": "Masaje de maniobras profundas, para eliminar contracturas y recuperar la estructura muscular."
+     },
+     "precio": 95000.0,
+     "tags": []
+    },
+    {
+     "id": "masaje-relajante-pies",
+     "nombre": {
+      "es": "Masaje Relajante de Pies 25´"
+     },
+     "descripcion": {
+      "es": "Masaje sumamente relajante para aliviar tensiones que repercuten en las distintas partes del cuerpo."
+     },
+     "precio": 95000.0,
+     "tags": []
+    }
+   ]
+  },
+  {
+   "id": "tratamientos-faciales",
+   "nombre": {
+    "es": "Tratamientos Faciales"
+   },
+   "foto": "",
+   "nota": {
+    "es": "Con reserva previa y según disponibilidad. Incluye acceso al sauna, baños de vapor y salas de relax."
+   },
+   "items": [
+    {
+     "id": "facial-puntas-diamante",
+     "nombre": {
+      "es": "Limpieza Facial con Puntas de Diamante 1h 20´"
+     },
+     "descripcion": {
+      "es": "Limpieza profunda de la piel, peeling, exfoliación profunda con micro cristales, eliminando células muertas, extracción de impurezas, alta frecuencia, hidratación y/o nutrición y máscara según el tipo de piel. Oxigena la piel promoviendo la producción natural de colágeno y elastina y potencia los principios activos de los cosméticos."
+     },
+     "precio": 135000.0,
+     "tags": []
+    },
+    {
+     "id": "facial-limpieza-profunda",
+     "nombre": {
+      "es": "Limpieza Facial Profunda 1h 20´"
+     },
+     "descripcion": {
+      "es": "Limpieza profunda de la piel, extracción de impurezas, alta frecuencia, masaje facial y aplicación de una máscara apropiada para cada tipo de piel. Suaviza la piel, aumenta la luminosidad del rostro y recupera las funciones vitales."
+     },
+     "precio": 125000.0,
+     "tags": []
+    },
+    {
+     "id": "microdermoabrasion",
+     "nombre": {
+      "es": "Microdermoabrasión con Puntas de Diamante 50´"
+     },
+     "descripcion": {
+      "es": "Exfoliación profunda con micro cristales, eliminando células muertas. Renueva la piel, atenuando líneas de expresión, con una oxigenación profunda para lucir la piel más fina, suave y radiante."
+     },
+     "precio": 115000.0,
+     "tags": []
+    },
+    {
+     "id": "mascara-oro",
+     "nombre": {
+      "es": "Máscara de Oro y Células Madre de Argán 25´"
+     },
+     "descripcion": {
+      "es": "Recomendada para pieles envejecidas o con pérdida de firmeza. Revitaliza y estimula la regeneración de la piel. Es antioxidante. Minimiza arrugas y líneas de expresión. Tiene un gran efecto iluminador y tensor."
+     },
+     "precio": 105000.0,
+     "tags": []
+    },
+    {
+     "id": "mascara-hialuronico",
+     "nombre": {
+      "es": "Máscara de Ácido Hialurónico 25´"
+     },
+     "descripcion": {
+      "es": "Efecto antiage con efecto de relleno que suaviza las arrugas. Eficaz hidratante de larga duración, humectando la piel en capas profundas. Deja la piel más luminosa y flexible."
+     },
+     "precio": 105000.0,
+     "tags": []
+    }
+   ]
+  },
+  {
+   "id": "membresias",
+   "nombre": {
+    "es": "Membresías"
+   },
+   "foto": "",
+   "nota": {
+    "es": "Acceso ilimitado a todas las instalaciones todos los días. Los abonos semestrales y anuales pueden abonarse en 3 cuotas sin interés. Beneficios para socios: toallas, batas y lockers, Wi-Fi, estacionamiento, 15% off en masajes, 10% off en pases de días de spa, 15% off en restaurantes, 10% off en alojamiento, 20% off en peluquería Hairspray, 20% off en lavandería. Horarios: lunes a viernes 7 a 22 hs, sábados 8 a 22 hs, domingos y feriados 8 a 20 hs. Reservas: Tel (0230) 438 5070 · WhatsApp +54 9 11 3135 3014."
+   },
+   "items": [
+    {
+     "id": "membresia-mensual",
+     "nombre": {
+      "es": "Abono Mensual"
+     },
+     "descripcion": {
+      "es": "Acceso ilimitado a todas las instalaciones todos los días."
+     },
+     "precio": 330000.0,
+     "tags": []
+    },
+    {
+     "id": "membresia-trimestral",
+     "nombre": {
+      "es": "Abono Trimestral"
+     },
+     "descripcion": {
+      "es": "Acceso ilimitado a todas las instalaciones todos los días."
+     },
+     "precio": 720000.0,
+     "tags": []
+    },
+    {
+     "id": "membresia-semestral",
+     "nombre": {
+      "es": "Abono Semestral*"
+     },
+     "descripcion": {
+      "es": "Acceso ilimitado a todas las instalaciones todos los días. *Puede abonarse en 3 cuotas sin interés."
+     },
+     "precio": 1200000.0,
+     "tags": []
+    },
+    {
+     "id": "membresia-anual",
+     "nombre": {
+      "es": "Abono Anual*"
+     },
+     "descripcion": {
+      "es": "Acceso ilimitado a todas las instalaciones todos los días. *Puede abonarse en 3 cuotas sin interés."
+     },
+     "precio": 2100000.0,
+     "tags": []
+    }
+   ]
+  }
+ ]
+}
