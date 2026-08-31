@@ -96,7 +96,6 @@
   }
 
   function renderLangSwitches() {
-    renderLangSwitchEn('langSwitch');
     renderLangSwitchEn('langSwitchSticky');
   }
 
