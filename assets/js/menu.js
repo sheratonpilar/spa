@@ -10,6 +10,8 @@
       loading: 'Cargando la carta…',
       error: 'No pudimos cargar la carta. Actualizá la página en unos minutos.',
       empty: 'La carta no tiene secciones publicadas todavía.',
+      noResults: 'No encontramos resultados para tu búsqueda.',
+      searchPlaceholder: 'Buscar un servicio…',
       updated: 'Actualizado el',
       consultar: 'Consultar',
     },
@@ -19,6 +21,8 @@
       loading: 'Loading the menu…',
       error: "We couldn't load the menu. Please refresh the page in a few minutes.",
       empty: 'This menu has no published sections yet.',
+      noResults: 'No results found for your search.',
+      searchPlaceholder: 'Search a service…',
       updated: 'Updated on',
       consultar: 'Ask staff',
     },
@@ -28,12 +32,14 @@
       loading: 'Carregando o cardápio…',
       error: 'Não foi possível carregar o cardápio. Atualize a página em alguns minutos.',
       empty: 'Este cardápio ainda não tem seções publicadas.',
+      noResults: 'Nenhum resultado encontrado para sua busca.',
+      searchPlaceholder: 'Buscar um serviço…',
       updated: 'Atualizado em',
       consultar: 'Consultar',
     },
   };
 
-  var state = { data: null, lang: 'es' };
+  var state = { data: null, lang: 'es', query: '' };
 
   function texto(campo) {
     if (!campo) return '';
@@ -43,6 +49,10 @@
   function ui(clave) {
     var d = UI[state.lang] || UI.es;
     return d[clave] || UI.es[clave] || '';
+  }
+
+  function normalizar(s) {
+    return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
   function formatearPrecio(valor, simbolo) {
@@ -64,8 +74,9 @@
     return lista.filter(function (l) { return LANG_LABELS[l]; });
   }
 
-  function renderLangSwitch() {
-    var box = document.getElementById('langSwitch');
+  function renderLangSwitchEn(contenedorId) {
+    var box = document.getElementById(contenedorId);
+    if (!box) return;
     var disponibles = idiomasDisponibles();
     box.innerHTML = '';
     if (disponibles.length < 2) return; // nada que elegir
@@ -84,11 +95,54 @@
     });
   }
 
+  function renderLangSwitches() {
+    renderLangSwitchEn('langSwitch');
+    renderLangSwitchEn('langSwitchSticky');
+  }
+
   function renderHero() {
     var eyebrow = document.getElementById('heroEyebrow');
     var tag = document.getElementById('heroTag');
+    var search = document.getElementById('searchInput');
     if (eyebrow) eyebrow.textContent = ui('eyebrow');
     if (tag) tag.textContent = ui('tag');
+    if (search) {
+      search.placeholder = ui('searchPlaceholder');
+      search.setAttribute('aria-label', ui('searchPlaceholder'));
+    }
+  }
+
+  function aplicarFiltro() {
+    var app = document.getElementById('app');
+    var nav = document.getElementById('nav');
+    var q = normalizar(state.query.trim());
+    var huboResultados = false;
+
+    app.querySelectorAll('.section').forEach(function (secEl) {
+      var visiblesEnSeccion = 0;
+      secEl.querySelectorAll('.item').forEach(function (itemEl) {
+        var match = !q || normalizar(itemEl.dataset.buscar || '').indexOf(q) >= 0;
+        itemEl.classList.toggle('is-hidden', !match);
+        if (match) visiblesEnSeccion++;
+      });
+      secEl.classList.toggle('is-hidden', visiblesEnSeccion === 0);
+      if (visiblesEnSeccion > 0) huboResultados = true;
+
+      var navLink = nav.querySelector('a[href="#' + secEl.id + '"]');
+      if (navLink) navLink.classList.toggle('is-hidden', visiblesEnSeccion === 0);
+    });
+
+    var vacio = app.querySelector('.no-results');
+    if (!huboResultados && q) {
+      if (!vacio) {
+        vacio = el('p', 'error no-results', ui('noResults'));
+        app.appendChild(vacio);
+      } else {
+        vacio.textContent = ui('noResults');
+      }
+    } else if (vacio) {
+      vacio.remove();
+    }
   }
 
   function renderContenido() {
@@ -129,6 +183,7 @@
 
       sec.items.forEach(function (item) {
         var row = el('article', 'item');
+        row.dataset.buscar = normalizar(texto(item.nombre) + ' ' + texto(item.descripcion));
 
         var top = el('div', 'item-row');
         top.appendChild(el('h3', 'item-name', texto(item.nombre)));
@@ -159,21 +214,22 @@
       var f = isNaN(d) ? '' : d.toLocaleDateString(LOCALE[state.lang] || 'es-AR', { day: '2-digit', month: 'long', year: 'numeric' });
       if (f) foot.appendChild(el('span', 'updated', ui('updated') + ' ' + f));
     }
+
+    aplicarFiltro();
   }
 
   function renderTodo() {
     renderHero();
-    renderLangSwitch();
+    renderLangSwitches();
     renderContenido();
   }
 
   function idiomaInicial() {
+    // Español por defecto siempre, salvo que el usuario ya haya elegido otro idioma antes.
     var disponibles = idiomasDisponibles();
     var guardado = null;
     try { guardado = localStorage.getItem('spa_lang'); } catch (e) {}
     if (guardado && disponibles.indexOf(guardado) >= 0) return guardado;
-    var nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
-    if (disponibles.indexOf(nav) >= 0) return nav;
     return disponibles.indexOf('es') >= 0 ? 'es' : (disponibles[0] || 'es');
   }
 
@@ -198,5 +254,14 @@
       });
   }
 
-  document.addEventListener('DOMContentLoaded', cargar);
+  document.addEventListener('DOMContentLoaded', function () {
+    cargar();
+    var search = document.getElementById('searchInput');
+    if (search) {
+      search.addEventListener('input', function () {
+        state.query = search.value || '';
+        aplicarFiltro();
+      });
+    }
+  });
 })();
